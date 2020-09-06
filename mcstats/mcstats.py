@@ -73,6 +73,33 @@ class StatListLengthReader:
     def read(self, stats):
         return len(read(stats, self.path, []))
 
+# Reader that counts the amount of entries of a list
+class StatCountAdvancementGroup:
+    def __init__(self, match):
+        self.match = match[0]
+        self.notmatch = match[1]
+
+    # read from stats
+    def read(self, stats):
+        count = 0;
+        match = self.match
+        notmatch = self.notmatch
+        for k in stats['advancements'].keys():
+            breaking = False
+            for i in notmatch:
+                #if i == 'quest:recipes' and k[0:6] == 'quest:':
+                #    print('|'+i+'|'+k[0:len(i)]+'|')
+                if k[0:len(i)] == i:
+                    breaking = True
+                    break
+            if breaking: continue
+            for i in match:
+                if k[0:len(i)] == i:
+                    if stats['advancements'][k]['done']:
+                        count = count + 1
+                        break
+        return count
+
 # Ranking entries
 class RankingEntry:
     def __init__(self, id, value):

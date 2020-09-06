@@ -3,7 +3,7 @@ from mcstats import mcstats
 mainStat = mcstats.MinecraftStat(
         'place_sign',
         {
-            'title': 'README.TXT',
+            'title': 'Labeller',
             'desc': 'Signs placed',
             'unit': 'int',
         },

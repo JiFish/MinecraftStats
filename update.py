@@ -447,9 +447,10 @@ for mcstat in mcstats.registry:
         best = mcstat.ranking[0]
         award['best'] = {'uuid': best.id, 'value': best.value}
         summaryPlayerIds.add(best.id)
-
-    # add to award info list
-    awards[mcstat.name] = award
+        # add to award info list
+        awards[mcstat.name] = award
+    else:
+        print("Skipping "+mcstat.name)
 
 # stop an event
 if args.stop_event:

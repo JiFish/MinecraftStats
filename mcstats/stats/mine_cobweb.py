@@ -4,7 +4,7 @@ mcstats.registry.append(
     mcstats.MinecraftStat(
         'mine_cobweb',
         {
-            'title': 'God...Damnit!',
+            'title': 'Web Remover',
             'desc': 'Cobweb removed',
             'unit': 'int',
         },

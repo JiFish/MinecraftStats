@@ -4,7 +4,7 @@ mcstats.registry.append(
     mcstats.MinecraftStat(
         'mine_wood',
         {
-            'title': 'Woodcutter',
+            'title': 'Lumberjack',
             'desc': 'Wood blocks cut',
             'unit': 'int',
         },

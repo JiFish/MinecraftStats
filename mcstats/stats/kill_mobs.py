@@ -64,7 +64,7 @@ create_kill_stat('fox','What Does The Fox Say?','Foxes',1932) # added in 19w07a
 create_kill_stat('mooshroom','Mycelium Cowboy','Mooshrooms')
 create_kill_stat('parrot','Stupid Bird!','Parrots')
 create_kill_stat('pig','Pork Chopper','Pigs')
-create_kill_stat('rabbit','Bunny Killer :(','Rabbits')
+create_kill_stat('rabbit','Bunny Killer','Rabbits')
 create_kill_stat('sheep','Big Bad Wolf','Sheep')
 create_kill_stat('squid','Pool Cleaner','Squids')
 create_kill_stat('strider','Lava Pool Cleaner','Striders',2520) # added in 20w13a
@@ -204,7 +204,7 @@ mcstats.registry.append(
     mcstats.MinecraftStat(
         'kill_fish',
         {
-            'title': 'Fish Catcher',
+            'title': 'Fish Spearer',
             'desc': 'Fish killed',
             'unit': 'int',
         },
